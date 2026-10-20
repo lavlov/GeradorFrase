@@ -1,0 +1,191 @@
+/* ===== CONFIGURAÇÕES GERAIS ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Trebuchet MS", sans-serif;
+    background: linear-gradient(135deg, #e9d5ff, #fce7f3, #ddd6fe);
+    color: #39234f;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+}
+
+/* ===== CONTAINER PRINCIPAL ===== */
+.container {
+    width: 100%;
+    max-width: 650px;
+    background: rgba(255, 255, 255, 0.88);
+    padding: 40px 30px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 12px 35px rgba(92, 45, 125, 0.18);
+    border: 2px solid #ead5ff;
+}
+
+/* ===== CABEÇALHO ===== */
+.cabecalho {
+    margin-bottom: 30px;
+}
+
+.cabecalho .subtitulo {
+    color: #a05ac7;
+    font-size: 12px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+h1 {
+    font-size: 36px;
+    color: #713b91;
+    margin-bottom: 15px;
+}
+
+.descricao {
+    color: #776582;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* ===== ÁREA DO GERADOR ===== */
+.gerador {
+    background: linear-gradient(145deg, #f3e8ff, #fce7f3);
+    padding: 30px 20px;
+    border-radius: 20px;
+    margin: 25px 0;
+    border: 1px solid #e9c9fa;
+}
+
+.icone-musica {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.gerador h2 {
+    font-size: 21px;
+    color: #713b91;
+    margin-bottom: 12px;
+}
+
+.gerador p {
+    font-size: 14px;
+    color: #826b90;
+    line-height: 1.6;
+}
+
+/* ===== BOTÃO ===== */
+.botao-gerar {
+    background: linear-gradient(135deg, #a855c9, #d946a5);
+    color: white;
+    border: none;
+    padding: 16px 30px;
+    margin-top: 25px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 6px 15px rgba(168, 85, 201, 0.25);
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.botao-gerar:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 22px rgba(168, 85, 201, 0.35);
+}
+
+.botao-gerar:active {
+    transform: scale(0.96);
+}
+
+.botao-gerar:focus-visible {
+    outline: 3px solid #713b91;
+    outline-offset: 4px;
+}
+
+/* ===== RESULTADO DA MÚSICA ===== */
+.resultado {
+    display: none;
+    background: white;
+    border: 2px dashed #d8a7f0;
+    padding: 25px 20px;
+    margin-top: 25px;
+    border-radius: 18px;
+    animation: aparecer 0.5s ease;
+}
+
+.resultado.ativo {
+    display: block;
+}
+
+.resultado .etiqueta {
+    color: #b05cc9;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 11px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.resultado h2 {
+    color: #713b91;
+    font-size: 28px;
+    margin-bottom: 12px;
+}
+
+.resultado p {
+    color: #806d8b;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* ===== RODAPÉ ===== */
+.rodape {
+    margin-top: 25px;
+    font-size: 12px;
+    color: #a18bac;
+    line-height: 1.6;
+}
+
+/* ===== ANIMAÇÃO ===== */
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 480px) {
+    .container {
+        padding: 30px 18px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .gerador {
+        padding: 25px 15px;
+    }
+
+    .botao-gerar {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .resultado h2 {
+        font-size: 24px;
+    }
+}
